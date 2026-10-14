@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Bestar Construction",
   description: "Building Excellence. Creating the Future. Bestar Construction delivers quality-driven construction solutions built around your vision, your needs, and your future.",
+  logo: "/images/logo.jpg",
   location: "Rue 6.853, Yaoundé, Cameroon",
   phones: [
     "+237 620 187 126",

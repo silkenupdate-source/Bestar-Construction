@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: ["Construction", "Yaoundé", "Cameroon", "Building", "Civil Engineering", "Renovation"],
+  icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
 };
 
 import { FloatingWidgets } from "@/components/ui/FloatingWidgets";

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, ArrowRight, Facebook, Instagram, Send } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { services } from "@/config/services";
@@ -12,13 +13,24 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* Brand */}
           <div className="flex flex-col gap-4 lg:col-span-3">
-            <Link href="/" className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tighter text-white leading-none">
-                BESTAR
-              </span>
-              <span className="text-xs font-semibold text-yellow-500 tracking-widest uppercase">
-                Construction
-              </span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-white p-0.5 shadow">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Bestar Construction Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-black tracking-tight text-white leading-none group-hover:text-yellow-400 transition-colors">
+                  BESTAR
+                </span>
+                <span className="text-xs font-bold text-yellow-500 tracking-widest uppercase mt-0.5">
+                  Construction
+                </span>
+              </div>
             </Link>
             <p className="text-sm mt-4 leading-relaxed">
               {siteConfig.description}

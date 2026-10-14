@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
@@ -23,12 +24,22 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm transition-all">
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden flex-shrink-0 bg-white">
+            <Image
+              src="/images/logo.jpg"
+              alt="Bestar Construction Logo"
+              width={56}
+              height={56}
+              className="w-full h-full object-contain"
+              priority
+            />
+          </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-bold tracking-tighter text-blue-900 leading-none">
+            <span className="text-2xl font-black tracking-tight text-blue-950 leading-none group-hover:text-yellow-600 transition-colors">
               BESTAR
             </span>
-            <span className="text-xs font-semibold text-yellow-500 tracking-widest uppercase">
+            <span className="text-xs font-bold text-yellow-500 tracking-widest uppercase mt-0.5">
               Construction
             </span>
           </div>
